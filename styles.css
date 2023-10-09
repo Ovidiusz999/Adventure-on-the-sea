@@ -1,0 +1,153 @@
+*{
+   margin: 0;
+   padding: 0;
+   color: white;
+   font-size: 30px;
+   font-weight: bolder;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+   background: linear-gradient( rgb(0, 195, 255), rgb(16, 0, 160));
+   background-attachment: fixed;
+
+}
+
+#start{
+   justify-content: center;
+   display: flex;
+   align-items: center;
+   height: 70vh;
+}
+
+#start h1{
+   color: white;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   font-weight: bolder;
+}
+
+#start button{
+   border: none;
+   background-color: coral;
+   color: white;
+   position: absolute;
+   margin-top: 200px;
+   padding: 25px;
+   font-size: 30px;
+   border-radius: 25px;
+   font-weight: bolder;
+}
+
+#start button:hover{
+   font-size: 40px;
+   transition: 1s;
+   background-color: cornflowerblue;
+   box-shadow: 0px 0px 15px white,
+               0px 0px 75px white;
+}
+
+#textStart{
+   justify-content: center;
+   text-align: center;
+
+}
+
+#AIDiv{
+   display: none;
+}
+
+#EnemyDiv{
+   display: none;
+}
+
+#AIPicture{
+   width: 300px;
+   height: 300px;
+   border-radius: 50%;
+   position: absolute;
+   top: 50px;
+   right: 50px;
+   border: inset;
+   border-color: white;
+   border-width: 5px;
+   border-style: solid;
+}
+
+#EnemyPicture{
+   width: 300px;
+   height: 300px;
+   border-radius: 50%;
+   position: absolute;
+   top: 50px;
+   left: 50px;
+   border: inset;
+   border-color: white;
+   border-width: 5px;
+   border-style: solid;
+}
+
+#AIText{
+   background-color: rgb(17, 17, 17);
+   color: white;
+   width: 400px;
+   position: absolute;
+   top: 90px;
+   right: 200px;
+   border: inset;
+   border-color: white;
+   padding: 20px;
+   border-radius: 35px;
+   border-width: 5px;
+   border-style: solid;
+   border-bottom-right-radius: 0;
+   padding-right: 200px;
+   font-size: 35px;
+}
+
+#EnemyText{
+   background-color: rgb(17, 17, 17);
+   color: white;
+   width: 400px;
+   position: absolute;
+   top: 90px;
+   left: 200px;
+   border: inset;
+   border-color: white;
+   padding: 20px;
+   border-radius: 35px;
+   border-width: 5px;
+   border-style: solid;
+   border-bottom-left-radius: 0;
+   padding-left: 200px;
+   font-size: 35px;
+}
+
+#choiche{
+   width: 100%;
+   display: none;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   top: 45%;
+}
+
+#choiche button{
+   border: none;
+   background-color: coral;
+   padding: 20px;
+   border-radius: 25px;
+   font-weight: bolder;
+   margin-left: 20px;
+   margin-right: 20px;
+   font-size: 25px;
+}
+
+#choiche button:hover{
+   font-size: 30px;
+   transition: 1s;
+   background-color: cornflowerblue;
+   box-shadow: 0px 0px 15px white,
+               0px 0px 75px white;
+}
+
+
