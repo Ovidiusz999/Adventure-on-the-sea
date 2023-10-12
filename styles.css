@@ -150,8 +150,19 @@ body{
                0px 0px 75px white;
 }
 
-#RPS {
+#RPS{
    display: none;
+   text-align: center;
+   margin-top: 100px;
+}
+
+#RPS div{
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-evenly;
+   margin-top: 50px;
+   margin-bottom: 50px;
 }
 
 

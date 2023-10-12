@@ -56,6 +56,13 @@ document.addEventListener("DOMContentLoaded", function() {
          ],
          user: "!Start!",
          enemy: "Lets fight! Rock, Paper, Scrissor!"
+       },
+       {
+         ghost: [
+           "Incredible"
+         ],
+         user: "Quess im just better.",
+         enemy: "Ahhh! you....(she died)"
        }
     ];
     
@@ -70,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
    let x = 0;
    let y = 0;
-
+   let i = 0;
    function startGame() {
       // Displays
       start.style.display = "none";
@@ -91,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
    function Game() {
       x += 1;
-      y += 1;
+      
 
       if (x < text.length) {
          ghostText.innerHTML = text[x].ghost[0];
@@ -113,6 +120,20 @@ document.addEventListener("DOMContentLoaded", function() {
         choiche.style.display = "none"
         RPS.style.display = "block"
       }
+
+      if (i === 1){
+         x+=1
+         y+=1
+         EnemyDiv.style.display = "block"
+         AIDiv.style.display = "block"
+         choiche.style.display = "block"
+         RPS.style.display = "none"
+         if (x < text.length) {
+            ghostText.innerHTML = text[x].ghost[0];
+            userText.innerHTML = text[x].user;
+            EnemyText.innerHTML = text[x].enemy;
+         }}
+
    }
 
    //variables
@@ -145,11 +166,11 @@ function game (){
    // computer chouche show
 
    if (computer === "rock"){
-      computerP.innerHTML = "The Computer chosed rock"
+      computerP.innerHTML = "Lisa chosed rock"
    } else if (computer === "paper"){
-      computerP.innerHTML = "The Computer chosed paper"
+      computerP.innerHTML = "Lisa chosed paper"
    } else {
-      computerP.innerHTML = "The Computer chosed scrissor"
+      computerP.innerHTML = "Lisa chosed scrissor"
    }
 
    // game logic
@@ -158,12 +179,14 @@ function game (){
       result.innerHTML = "You have lost -_-";
    } else if (user === 'rock' && computer === 'scrissor') {
       result.innerHTML = "You have won >_<";
+      i += 1;
    } else if (user === 'rock' && computer === 'rock') {
       result.innerHTML = "Its a draw O_O";
 
 
    } else if (user === 'paper' && computer === 'rock') {
       result.innerHTML = "You have won >_<";
+      i += 1;
    } else if (user === 'paper' && computer === 'paper') {
    result.innerHTML = "Its a draw O_O";
    } else if (user === 'paper' && computer === 'scrissor') {
@@ -174,6 +197,7 @@ function game (){
       result.innerHTML = "You have lost -_-";
    } else if (user === 'scrissor' && computer === 'paper') {
       result.innerHTML = "You have won >_<";
+      i+= 1;
    } else if (user === 'scrissor' && computer === 'scrissor') {
       result.innerHTML = "Its a draw O_O";
    }
