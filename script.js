@@ -63,7 +63,32 @@ document.addEventListener("DOMContentLoaded", function() {
          ],
          user: "Quess im just better.",
          enemy: "Ahhh! you....(she died)"
-       }
+       },
+       {
+         ghost: [
+           "Now we have the one key out of the third"
+         ],
+         user: "Nice!",
+       },
+       {
+         ghost: [
+           "We have to go forward"
+         ],
+         user: "Alright!",
+       },
+       {
+         ghost: [
+           "Here we are. Our enemy is close!"
+         ],
+         user: "...",
+       },
+       {
+       ghost: [
+         "We have to beat him now!"
+       ],
+       user: "!Start!",
+       enemy: "Die!!!"
+      }
     ];
     
    const firstB = new Image();
@@ -74,6 +99,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
    const island1 = new Image();
    island1.src = "src/island1.jpg";
+
+   const island2 = new Image();
+   island2.src = "src/island2.jpg";
 
    let x = 0;
    let y = 0;
@@ -121,19 +149,18 @@ document.addEventListener("DOMContentLoaded", function() {
         RPS.style.display = "block"
       }
 
-      if (i === 1){
-         x+=1
-         y+=1
-         EnemyDiv.style.display = "block"
-         AIDiv.style.display = "block"
-         choiche.style.display = "block"
-         RPS.style.display = "none"
-         if (x < text.length) {
-            ghostText.innerHTML = text[x].ghost[0];
-            userText.innerHTML = text[x].user;
-            EnemyText.innerHTML = text[x].enemy;
-         }}
+      if(x===8){
+         EnemyDiv.style.display = "none"
+      }
 
+      if(x===9){
+         bodyStart.style.backgroundImage = `url('${island2.src}')`;
+      }
+      
+
+      if(x===12){
+         
+      }
    }
 
    //variables
@@ -201,6 +228,14 @@ function game (){
    } else if (user === 'scrissor' && computer === 'scrissor') {
       result.innerHTML = "Its a draw O_O";
    }
+
+   if (i === 1){
+      x+=1
+      y+=1
+      EnemyDiv.style.display = "block"
+      AIDiv.style.display = "block"
+      choiche.style.display = "block"
+      RPS.style.display = "none"}
 }
 
 // onclick events
